@@ -2,7 +2,7 @@
 
   const DATA = [
     {
-      topic:"Asset Lifecycle",
+      topic:"Managing Assets",
       select:1,
       prompt:"Universal Containers (UC) wants to track the Asset lifecycle when Equipment has been swapped out. What should a consultant recommend to meet this requirement?",
       options:[
@@ -24,7 +24,7 @@
       ]
     },
     {
-      topic:"Scheduling & Dispatch",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"The dispatcher at Ursa Major Solar needs to adjust scheduled service appointments so high-priority work can be scheduled in favor of previously scheduled lower-priority work. Which action should the dispatcher take to change the schedule?",
       options:[
@@ -48,7 +48,7 @@
       ]
     },
     {
-      topic:"Crew Management",
+      topic:"Managing Resources",
       select:1,
       prompt:"Universal Containers plans to implement Crew Management to better support its clients. Which area does the Consultant need to consider as part of the recommendation?",
       options:[
@@ -72,7 +72,7 @@
       ]
     },
     {
-      topic:"Territories & Hours",
+      topic:"Managing Resources",
       select:1,
       prompt:"Universal Containers has Resources working in multiple countries and time zones. Each country has different holidays and working hours as allowed by law. What should a Consultant recommend to implement these parameters with the most flexibility possible?",
       options:[
@@ -96,7 +96,7 @@
       ]
     },
     {
-      topic:"Mobile Knowledge",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"Service technicians at AW Computing use the Field Service mobile application when in the field. The technicians rely on Knowledge articles to assist them with completing assigned work. How should the solution be configured to ensure technicians can access relevant Knowledge articles?",
       options:[
@@ -119,7 +119,7 @@
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:3,
       prompt:"Universal Containers wants to track Technicians' van stock using the Salesforce Field Service mobile app and ensure that Technicians report when parts are used. Which three data elements should a Consultant recommend tracking to support these requirements?",
       options:[
@@ -142,7 +142,7 @@
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:1,
       prompt:"An inventory manager at Universal Containers wants to better understand the distribution of a critical and expensive part across all inventory locations as the part is reused and restocked. What should the Consultant leverage to meet this requirement?",
       options:[
@@ -165,7 +165,7 @@
       ]
     },
     {
-      topic:"Resources & Licensing",
+      topic:"Managing Resources",
       select:1,
       prompt:"An employee at Universal Containers performs the role of a Dispatcher and a Technician. How should a Consultant configure Salesforce Field Service to support this behavior?",
       options:[
@@ -190,7 +190,7 @@
       ]
     },
     {
-      topic:"Licensing",
+      topic:"Managing Resources",
       select:1,
       prompt:"Universal Containers plans to deploy Salesforce Field Service to 100 external contractors. There are 75 contractors who need access to Work Orders, Assets, Mobile App, and Chatter. The remaining 25 contractors are paid a commission on sales of containers and need to schedule resources. Which license types and quantities should the Consultant recommend?",
       options:[
@@ -210,7 +210,7 @@
       ]
     },
     {
-      topic:"Work Orders & Appointments",
+      topic:"Managing Work Orders",
       select:2,
       prompt:"A Universal Containers customer is having issues with three containers at the customer's site. Each container is tracked as an Asset on the customer's Account. Which two methods should the Consultant recommend to ensure the service associated with each container can be handled independently?",
       options:[
@@ -229,7 +229,7 @@
       ]
     },
     {
-      topic:"Mobile Access",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"Some Technicians report that they are unable to log in to the Salesforce Field Service mobile app. The Consultant confirmed that the Technicians have the Salesforce Field Service Resource License and Salesforce Field Service Resource Permissions assigned to them. How should a Consultant provide access to the Salesforce Field Service mobile app?",
       options:[
@@ -254,7 +254,7 @@
       ]
     },
     {
-      topic:"Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"An extreme weather situation impacted both the volume of open work and the number of available resources at Universal Containers. Which approach should a Consultant recommend to realign available resources with open work?",
       options:[
@@ -278,7 +278,7 @@
       ]
     },
     {
-      topic:"Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"The field service administrator at Ursa Major Solar updates the skills on the most common work types to adapt to the increasing complexity of jobs. This change has led to many service appointments to be in violation. There is a global optimization job set up to run nightly that has been working correctly up until this point. The administrator needs to understand why the jobs are still scheduled to resources that lack the appropriate skill level. What are two reasons appointments remaining in violation and are not reassigned?",
       options:[
@@ -300,7 +300,7 @@
       ]
     },
     {
-      topic:"Service Appointment Workflow",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"Universal Containers has Role-based Technicians and Managers who handle Service Appointments. Many times, Technicians arrive on-site but are unable to gain access to the customer's equipment. In this scenario, only the Manager has permission to cancel the Service Appointment. How should a Consultant configure Status Transitions to enforce this business process?",
       options:[
@@ -324,7 +324,7 @@
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"Universal Containers is tracking customer issues in their call center. Sometimes this requires a Technician to be on-site at the customer's location. What set of steps should a Consultant recommend to dispatch the Technician?",
       options:[
@@ -348,7 +348,7 @@
       ]
     },
     {
-      topic:"Mobile Capture",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"Universal Containers wants Field Technicians to capture customer authorization via a signature through Salesforce mobile app. What should a Consultant recommend?",
       options:[
@@ -372,7 +372,7 @@
       ]
     },
     {
-      topic:"Mobile Capture",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"A Company would like to provide Field Service Technicians the ability to capture details and customer approval on completed work so that the details can be compiled and sent to the customer electronically. What should a Consultant recommend to meet this requirement?",
       options:[
@@ -396,7 +396,7 @@
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:1,
       prompt:"A Company's products need to be traceable from the factory to customer sites. The products are installed using disposable kits. How should the consultant configure this?",
       options:[
@@ -420,7 +420,7 @@
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Company wants to standardize the creation of Work Orders. Historically, Work Orders have been set up with the incorrect skills and estimated time to completion. What should a Consultant utilize to meet this requirement?",
       options:[
@@ -444,7 +444,7 @@
       ]
     },
     {
-      topic:"Mobile Knowledge",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"A Company wants technicians to view work progress through the work order line-item in the field service lightning mobile app. Which configuration steps should a consultant take to meet this requirement?",
       options:[
@@ -468,7 +468,7 @@
       ]
     },
     {
-      topic:"Scheduling Policies",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company wants to prevent the lunch break from interfering with existing scheduled work. How should a Consultant configure the Scheduling Policy to ensure a 30-minute lunch break begins every day after 1 PM?",
       options:[
@@ -492,7 +492,7 @@
       ]
     },
     {
-      topic:"Appointment Booking",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company offers 2-hour versus 4-hour appointment booking windows for Gold versus Standard customers. What should a Consultant recommend to offer appropriate appointment booking windows?",
       options:[
@@ -516,7 +516,7 @@
       ]
     },
     {
-      topic:"Dispatching",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company is implementing drip feed dispatching. When testing the new functionality, the drip does not dispatch appointments as expected. A Consultant is engaged to troubleshoot the issue. What is preventing the drip feed from triggering?",
       options:[
@@ -540,7 +540,7 @@
       ]
     },
     {
-      topic:"Mobile Knowledge",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"A Company wants to deploy knowledge to its field team. How should A Company ensure its technicians can access Knowledge articles offline?",
       options:[
@@ -564,7 +564,7 @@
       ]
     },
     {
-      topic:"Dispatching",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"A Company wants to dispatch groups of Service Appointments to their Technicians. The number of Service Appointments dispatched at a time varies among different Service Territories. Which two settings should a Consultant enable to ensure Service Appointments are dispatched correctly?",
       options:[
@@ -588,7 +588,7 @@
       ]
     },
     {
-      topic:"Entitlements & Milestones",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"When customers call in for support at A Company, a case is always created. If the issue cannot be solved without dispatching a technician, a work order is created from the case. Milestones are currently being used on cases, and support operations would like to extend the use of milestones to the work orders. To meet this requirement, the system administrator added the Milestone Lightning component to the work order Lightning record page. Technicians and managers are reporting that there are no milestones listed when viewing the record. How should this issue be resolved?",
       options:[
@@ -612,7 +612,7 @@
       ]
     },
     {
-      topic:"Sharing & Access",
+      topic:"Permissions and Sharing",
       select:1,
       prompt:"A Company uses a private record access model in the sales, support, and field service organizations. How should the system administrator ensure that the technicians have the appropriate access to the service appointments dispatched to them?",
       options:[
@@ -636,7 +636,7 @@
       ]
     },
     {
-      topic:"Territories & Hours",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company has 140 service resources who handle 2,400 service appointments per day. How should A Company define Service Territories to ensure a high quality of optimization and dispatcher experience?",
       options:[
@@ -659,7 +659,7 @@
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Assets",
       select:1,
       prompt:"A Company wants service managers to quickly identify status changes in the lifecycle of a specific component in a customer's install base. What should a Consultant utilize to track the lifecycle?",
       options:[
@@ -682,7 +682,7 @@
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:2,
       prompt:"A Company wants to ensure Technicians have the correct equipment before arriving at a Job site. Which two considerations should the Consultant take into account when configuring Salesforce Field Service?",
       options:[
@@ -706,7 +706,7 @@
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Assets",
       select:1,
       prompt:"A Company wants to report on the volume of products installed within a specific timeframe. Which solution should the consultant utilize to meet the requirement?",
       options:[
@@ -729,7 +729,7 @@
       ]
     },
     {
-      topic:"Products & Pricing",
+      topic:"Managing Inventory",
       select:1,
       prompt:"A Company is deploying Field Service Lightning in Europe, where pricing varies by country. What Price Book structure is recommended?",
       options:[
@@ -753,7 +753,7 @@
       ]
     },
     {
-      topic:"Resources & Licensing",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"One of a company's customers reported that the Technician sent to their site left without cleaning up the work area afterward. How can a company ensure that a different Technician is assigned all future work for that Customer?",
       options:[
@@ -776,7 +776,7 @@
       ]
     },
     {
-      topic:"Territories & Hours",
+      topic:"Managing Resources",
       select:2,
       prompt:"A Company's Technicians may be assigned to Jobs with an arrival window to meet the customer appointment time preference. Technicians are also assigned to Jobs without a preferred appointment time. In which two ways should the Consultant define Operating Hours to meet this requirement?",
       options:[
@@ -798,7 +798,7 @@
       ]
     },
     {
-      topic:"Mobile Access",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"Geolocation tracking is enabled for a company's Technicians but should only apply to full-time employees. How can geolocation tracking for contractors be disabled?",
       options:[
@@ -821,7 +821,7 @@
       ]
     },
     {
-      topic:"Scheduling & Complex Work",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A company performs multi-stage jobs, where the second job can only begin after completion of the first job. How should a Consultant recommend implementing this process?",
       options:[
@@ -846,7 +846,7 @@
       ]
     },
     {
-      topic:"Preventive Maintenance",
+      topic:"Configuring Maintenance Plans",
       select:1,
       prompt:"To ensure that preventative maintenance work can be completed on time, A Company wants to automatically generate Work Orders 14 days before the next suggested maintenance date. How should the Consultant meet this requirement?",
       options:[
@@ -871,7 +871,7 @@
       ]
     },
     {
-      topic:"Contractor Licensing",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company plans to deploy field service lightning to 100 external contractors. There are 75 contractors who need access to Work Orders, Assets, Mobile App, and Chatter. The remaining 25 contractors are paid a commission on sales of containers and need to schedule resources. Which license types and quantities should the consultant recommend?",
       options:[
@@ -896,7 +896,7 @@
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A company wants its technician to follow a standard operation procedure (SOP) while performing maintenance on an individual Asset. Each operation should be captured independently to allow technician to enter note and update status as they progress with the work. Preventative maintenance should be with a single visit. Which data model should the consultant recommend to the company?",
       options:[
@@ -921,7 +921,7 @@
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:1,
       prompt:"A mobile technician uses parts present in their van to complete an on-site customer installation. The technician has marked the Service Appointment and the Work Order as completed. They want to record the parts used in completing the job and adjust their van stock. Where should the technician record this information?",
       options:[
@@ -945,7 +945,7 @@
       ]
     },
     {
-      topic:"Dispatch & Reassignment",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Dispatcher at A Company has just informed that one of their field employees, who has five schedules for today, called in sick. How should the work load be assigned to other Field Technicians?",
       options:[
@@ -969,7 +969,7 @@
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:1,
       prompt:"A technician needs to get replacement part for damaged inventory on them for an upcoming job. To which object should the technician add a product request record?",
       options:[
@@ -993,7 +993,7 @@
       ]
     },
     {
-      topic:"Work Order Lifecycle",
+      topic:"Managing Work Orders",
       select:2,
       prompt:"A Company has a large volume of cancellations occurring on their Work Orders. The COO wants to manage Work Order cancellations and subsequent follow-ups. Which two options should a Consultant recommend? Choose 2 answers",
       options:[
@@ -1015,7 +1015,7 @@
       ]
     },
     {
-      topic:"Customer Communication",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"A Company wants to improve customer satisfaction around upcoming appointments. When designing the Customer Service Representative's user interface, most cases, which two fields should be shared with the customer about an upcoming appointment? Choose 2 answers",
       options:[
@@ -1035,7 +1035,7 @@
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company has hired a contractor to help with service calls on an as-needed basis. The contractor should be limited to travel a maximum of 50 minutes from home. Which action should a consultant recommend?",
       options:[
@@ -1060,7 +1060,7 @@
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:3,
       prompt:"A Company wants to track Technicians' van stock using the Salesforce Field Service Mobile App and ensure that Technicians report when parts are used. Which three data elements should a Consultant recommend tracking to support these requirements? Choose 3 answers",
       options:[
@@ -1081,7 +1081,7 @@
       ]
     },
     {
-      topic:"Status Transitions & Pinning",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"Service Appointments in a \"Cannot Complete\" Status may indicate that an additional part or expert assistance is needed to complete the work. A Company defined that Service Appointments in a \"Cannot Complete\" Status are unable to be rescheduled or unscheduled for history tracking purposes. Which two items should the consultant recommend to meet the requirement? Choose 2 answers",
       options:[
@@ -1103,7 +1103,7 @@
       ]
     },
     {
-      topic:"Sharing & Territories",
+      topic:"Permissions and Sharing",
       select:2,
       prompt:"A Consultant has implemented User Territories at A Company in a private sharing model. A new Midwest Service Territory has been created. Which two actions should A Company take to give the dispatcher access to all relevant Midwest records? Choose 2 answers",
       options:[
@@ -1125,7 +1125,7 @@
       ]
     },
     {
-      topic:"Preventive Maintenance",
+      topic:"Configuring Maintenance Plans",
       select:1,
       prompt:"One of the products sold by A Company requires quarterly Service Appointments. Which feature should a Consultant use to meet this requirement?",
       options:[
@@ -1148,7 +1148,7 @@
       ]
     },
     {
-      topic:"Preventive Maintenance",
+      topic:"Configuring Maintenance Plans",
       select:2,
       prompt:"A Company requires a trained inspectors to make 3 site per year to inspect the container customer's sites. These visits must be scheduled within 14 days of inspection due date. What are two ways a Consultant can configure maintenance plans to meet the requirements? Choose 2 answers",
       options:[
@@ -1171,7 +1171,7 @@
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:2,
       prompt:"A Company performs Service on Field Assets that require a sequence of Work Tasks. A Consultant has recommended Work Order Line Items to manage the tasks and Assets/Parts necessary to manage the work. Which two of the following must be considered as part of this solution to ensure Work Orders are properly completed. Choose 2 answers",
       options:[
@@ -1192,7 +1192,7 @@
       ]
     },
     {
-      topic:"Work Orders & Appointments",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Technician at A Company is responsible for servicing multiple Assets at a customer site during a single visit. A Company wants to minimize impact for the customer and consolidate work for its Technician. What should the Consultant recommend to meet this requirement?",
       options:[
@@ -1217,7 +1217,7 @@ This is effectively the mirror image of Ticket #13 in this deck ("three containe
       ]
     },
     {
-      topic:"Sharing & Territories",
+      topic:"Permissions and Sharing",
       select:2,
       prompt:"A Company has implemented Field Service using a private access model. A Company has also set Work Types to automatically generate Service Appointments. Which two sharing options are available for these Service Appointments? Choose 2 answers",
       options:[
@@ -1239,7 +1239,7 @@ This is effectively the mirror image of Ticket #13 in this deck ("three containe
       ]
     },
     {
-      topic:"Field Service Mobile App",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"A Company wants Technicians using the Salesforce Field Service Mobile App to indicate when Service Appointments are at risk of late completion. What should a Consultant recommend to meet this requirement?",
       options:[
@@ -1263,7 +1263,7 @@ This is effectively the mirror image of Ticket #13 in this deck ("three containe
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"How should a Consultant configure Salesforce Field Service to ensure agents and dispatchers can quickly create Work Orders with the appropriate materials?",
       options:[
@@ -1286,7 +1286,7 @@ This is effectively the mirror image of Ticket #13 in this deck ("three containe
       ]
     },
     {
-      topic:"Dispatcher Console & Gantt",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company wants to provide a view of emergency work that is only visible to dispatchers. What should the consultant do to meet the requirement?",
       options:[
@@ -1310,7 +1310,7 @@ This is effectively the mirror image of Ticket #13 in this deck ("three containe
       ]
     },
     {
-      topic:"Service Reports",
+      topic:"Configuring Mobility",
       select:2,
       prompt:"A Company needs to verify that a repair job has been completed to the customer satisfaction before an invoice can bee generated. Which two items should the consultant consider? Choose 2 answers.",
       options:[
@@ -1333,7 +1333,7 @@ This is effectively the mirror image of Ticket #13 in this deck ("three containe
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"A Service Technician at A Company handles yearly maintenance checks. The job usually lasts 2 to 3 hours. Due to the lack of customer availability, many appointments are cancelled or need to be rescheduled at the last minute. Which two features would be most helpful in aiding the dispatcher with updated schedules for technicians? Choose 2 answers",
       options:[
@@ -1356,7 +1356,7 @@ This is effectively the mirror image of Ticket #13 in this deck ("three containe
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A technician reported that the travel time calculated between appointments is often too short because of job delays throughout the day. Which setting should a consultant consider to improve travel time accuracy?",
       options:[
@@ -1379,7 +1379,7 @@ This is effectively the mirror image of Ticket #13 in this deck ("three containe
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Inventory",
       select:1,
       prompt:"An Agent has to create a Work Order for complex installation. A Work Order Line Item is created for each required component so it can be tracked and priced separately. However, a few of the components are only on the company's Preferred Price Book while others are on the U.S. Price Book. Which solution should a Consultant recommend so the agent can meet this requirement?",
       options:[
@@ -1406,7 +1406,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Types",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Company typically performs installs, break-fix, and inspections for all clients. The Service Manager wants to create a template for common work requests. What should a Consultant implement to assist the dispatch team?",
       options:[
@@ -1429,7 +1429,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company wants to ensure that Service Appointments are only assigned to Active Resources. Which configuration should a Consultant for the Scheduling Policy?",
       options:[
@@ -1453,7 +1453,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"In which two scenarios should a consultant recommend multi day Service Appointment? Choose 2 answers",
       options:[
@@ -1474,7 +1474,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Service Territories",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company wants to assign Service Appointment based on the Polygon of the child Service Territory in the hierarchy. How should a Consultant assign Service Appointments to the Polygon?",
       options:[
@@ -1497,7 +1497,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Licensing",
+      topic:"Managing Resources",
       select:1,
       prompt:"An employee at A Company performs the role of a dispatcher and a technician. How should a consultant configure the field service lightning to support this behavior?",
       options:[
@@ -1521,7 +1521,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:2,
       prompt:"Time Sheet Entries can be associated to which two objects? Choose 2 answers",
       options:[
@@ -1542,7 +1542,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatching",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company wants to improve overall responsiveness to customers. Which Dispatch Technique should the Consultant implement to provide the greatest schedule flexibility?",
       options:[
@@ -1565,7 +1565,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Orders & Appointments",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Company wants to track when Technicians need to visit a customer site multiple times to resolve an issue. How should a Consultant configure this using a single Work Order.",
       options:[
@@ -1588,7 +1588,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"Which two objects are required when configuring an optimization job? (Select all that apply)",
       options:[
@@ -1612,7 +1612,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Entitlements & Milestones",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"Universal Containers maintains their service level agreements at the customer level only. How can a consultant ensure agents can verify coverage?",
       options:[
@@ -1636,7 +1636,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatcher Console & Gantt",
+      topic:"Managing Scheduling and Optimization",
       select:3,
       prompt:"In the Dispatch Console, when viewing the Map, which three data element can be presented on the Dispatcher? (Choose three)",
       options:[
@@ -1662,7 +1662,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Products & Pricing",
+      topic:"Managing Inventory",
       select:1,
       prompt:"Universal Containers wants to invoice its customers for the parts used when performing repairs on installed Assets. What should a Consultant recommend to track the price of the parts consumed?",
       options:[
@@ -1686,7 +1686,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Products & Pricing",
+      topic:"Managing Inventory",
       select:2,
       prompt:"Universal Containers wants to track the total associated price when servicing Work Orders for Customers. Which two of the following should a Consultant recommend? (Choose two)",
       options:[
@@ -1710,7 +1710,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Mobile Capture",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"Universal Containers wants their Technicians to record an Asset Number using a barcode scanner when completing Work Orders. What field type should be configured to capture this information?",
       options:[
@@ -1734,7 +1734,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Mobile Access",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"Universal Containers has a Partner Community. Work Orders are assigned to these partners. Service Appointments or Service Resources are hidden from partners. How would a Partner user update the Work Order record from a mobile Device?",
       options:[
@@ -1759,7 +1759,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatcher Console & Gantt",
+      topic:"Managing Scheduling and Optimization",
       select:3,
       prompt:"The Dispatcher at A Company wants to schedule Service Appointments from Dispatch Console while taking the Scheduling Policy into consideration. Which three options are available to the Dispatcher? (Select all that apply)",
       options:[
@@ -1783,7 +1783,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Resources",
       select:1,
       prompt:"Dispatchers at A Company want to ensure resources assigned to a Work Order have the appropriate level of expertise. What should a Consultant implement to accomplish this requirement?",
       options:[
@@ -1807,7 +1807,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Types",
+      topic:"Managing Work Orders",
       select:3,
       prompt:"Which three objects are associate to the Work Type? (Select all that apply)",
       options:[
@@ -1832,7 +1832,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Sharing & Territories",
+      topic:"Permissions and Sharing",
       select:1,
       prompt:"Which object can be used to share Service Appointments with Service Resources in Salesforce Field Service?",
       options:[
@@ -1856,7 +1856,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Types",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"Approximately 70% of A Company site visits are inspections and quotation sessions that take roughly the same amount of time and set of resource skills to complete. What should a Consultant recommend to streamline the creation of these Work Orders?",
       options:[
@@ -1879,7 +1879,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:2,
       prompt:"To prepare an upgrade, a mobile technician creates a product request for three circuit boards to be sent from the main warehouse to the customer site. The completed job needs two of the boards. Which two Field Service tools should the technician use to return the unused circuit board to the warehouse?",
       options:[
@@ -1907,7 +1907,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Status Transitions & Pinning",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"A Company schedules jobs that require multiple steps when on-site. A Company wants to add a new status to the existing status flow. Which two configurations should the Consultant set up to meet this requirement? (Select all that apply)",
       options:[
@@ -1930,7 +1930,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling Policies",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Dispatcher needs to reduce the backlog of Service Appointments in different territories and focus on individual customer service preferences. Which Scheduling Policy should the Dispatcher use?",
       options:[
@@ -1953,7 +1953,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatching",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company normally focuses on minimizing travel. Weather can cause situations that require expedited on-site service. How should a Consultant recommend A Company handle unplanned service during times of severe weather?",
       options:[
@@ -1977,7 +1977,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Products & Pricing",
+      topic:"Managing Inventory",
       select:1,
       prompt:"A Company has customers who have previously negotiated pricing on some products. Which Price Book structure should a Consultant recommend when considering the implications of pricing on Work Orders?",
       options:[
@@ -2001,7 +2001,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Crew Management",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company needs to sent technicians into the field to service containers. It takes two technicians with specialized skills to complete the work at the same time. How should the consultant meet this requirement?",
       options:[
@@ -2021,7 +2021,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Territories & Hours",
+      topic:"Managing Resources",
       select:1,
       prompt:"At A Company, the Service Territory Member's time zone is one hour behind the Service Territory's time zone. How should the Consultant ensure proper scheduling and optimization for the member?",
       options:[
@@ -2045,7 +2045,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Mobile App",
+      topic:"Configuring Mobility",
       select:2,
       prompt:"Technicians at A Company use the Salesforce Field Service Mobile App at customer sites. After completing work, the Technician updates the Service Appointment Complete and saves the record. Dispatchers see the appointment as Dispatched on the Console instead of seeing the Complete status update. Which two troubleshooting steps should a Consultant take to resolve the issue?",
       options:[
@@ -2069,7 +2069,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Entitlements & Milestones",
+      topic:"Managing Work Orders",
       select:3,
       prompt:"A Company wants to implement Service Level Agreements (SLA) for Work Orders. Which three considerations should the Consultant take into account?",
       options:[
@@ -2094,7 +2094,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Resource Absences",
+      topic:"Managing Resources",
       select:2,
       prompt:"A Company's Technicians have 12 mandatory holidays each Calendar Year. Technicians need to view all of their absence records at once. Which two applications should a Consultant recommend to meet this requirement?",
       options:[
@@ -2116,7 +2116,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatching",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company wants to automatically dispatch a Technician's next two Service Appointments after the Technician completes their current Service Appointment. A Company wants to be consistent across all of the Service Territories and control the number of Service Appointments that are pushed to the Technician. What automated processing should the Consultant configure upon Work Order completion to dispatch the next two Appointments?",
       options:[
@@ -2140,7 +2140,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Mobile Flows & Quick Actions",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"A Company wants to ensure that Technicians enter required information only once when completing Work Orders on the Salesforce Field Service Mobile App. The information entered by Technicians needs to also update the Service Appointment and the Case that are associated to the Work Order. What should a Consultant leverage to ensure the right data is captured from Salesforce Field Service Mobile App?",
       options:[
@@ -2164,7 +2164,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Asset Lifecycle",
+      topic:"Managing Assets",
       select:1,
       prompt:"A Company has implemented a Flow that allows Technicians to replace faulty or damaged Assets directly from within the Salesforce Field Service Mobile App. Once a replacement has been made, where can the Asset Relationships be viewed?",
       options:[
@@ -2186,7 +2186,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Mobile Screens & Layouts",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"A Company wants to limit their Technicians' view of Work Orders and Service Appointments in the Salesforce Field Service Mobile App. What should a Consultant recommend to control their Technicians' view?",
       options:[
@@ -2210,7 +2210,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Assets",
       select:1,
       prompt:"Each container consists of multiple parts that are tracked by Asset records. A Company's customers usually wait until several parts need service before requesting a Technician come on-site to save money on service charges. How should a Consultant configure Salesforce Field Service to track the work performed?",
       options:[
@@ -2234,7 +2234,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company's Dispatchers want to visualize the planned travel route for a Technician during their shift. Which feature should the Consultant recommend to meet the requirement?",
       options:[
@@ -2256,7 +2256,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Company wants to track the time a Service Resource spends on each step of more complex repair jobs. This time could include travel, prep and on-site time. How could the Service Resource's Time Sheet be configured to track the total time spent on each step?",
       options:[
@@ -2278,7 +2278,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Mobile Screens & Layouts",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"Which configuration should a Company use to brand the Salesforce Field Service Mobile App?",
       options:[
@@ -2302,7 +2302,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Crew Management",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Dispatcher notices that the Crew assigned to a Service Appointment is missing a skill for the work assigned. How can the Dispatcher update the Service Crew to meet those requirements?",
       options:[
@@ -2325,7 +2325,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Company provides services to multiple machines installed at customer sites. Each machine has different issue that need to be fixed. A Company wants to track progress, different parts used, and time spent on each machine when dispatching a Technician. How should the Consultant meet these requirements?",
       options:[
@@ -2347,7 +2347,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company occasionally needs to use two Technicians to complete a job, however the Technicians can be onsite at different times. How should a Consultant implement this process?",
       options:[
@@ -2371,7 +2371,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"Which two considerations impact the scheduled timeframe of Multi-day Work?",
       options:[
@@ -2392,7 +2392,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Company sells widgets with multiple components. Based on a problem reported by a customer, one or more of the components need to be replaced. What should a Consultant recommend to accurately record the required work?",
       options:[
@@ -2415,7 +2415,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:2,
       prompt:"A Company wants to ensure that inventory needed for repair jobs is tracked and managed so Technicians have the material for their jobs. Which two ways should a Consultant recommend tracking these inventory requirements in Salesforce?",
       options:[
@@ -2434,7 +2434,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company provides maintenance and emergency service to its customers. Sending Technicians to emergency calls during the day causes long travel times and reduces the number of appointments that a Technician can complete. Which feature should the Consultant use to reduce travel time and increase productivity?",
       options:[
@@ -2455,7 +2455,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:1,
       prompt:"A Company Technicians frequently need to request more parts from another inventory location when stock runs low. How can A Company Technicians achieve this for each product requested?",
       options:[
@@ -2479,7 +2479,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Assets",
       select:1,
       prompt:"A Company track installed Products using the Salesforce Asset object. Each individual solar panel is treated separately. To save money on service calls, many times customers will wait to have a technician come onsite until there are multiple panels that need servicing. How should the callout for multiple panels be treated in Salesforce?",
       options:[
@@ -2502,7 +2502,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Maintenance Plans",
+      topic:"Configuring Maintenance Plans",
       select:2,
       prompt:"Which two scenarios are full supported by Maintenance Plans?",
       options:[
@@ -2524,7 +2524,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Data Model",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Company wants to track and report on individual tasks completed, including parts consumed and pricing details, as part of the Work Order completion process. A Company wants to schedule one or multiple tasks to different Technicians as needed. How should the Consultant meet the requirement utilizing the standard Salesforce Field Service Data Model?",
       options:[
@@ -2548,7 +2548,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Maintenance Plans",
+      topic:"Configuring Maintenance Plans",
       select:2,
       prompt:"A Company operates in a highly regulated industry. Technicians must conduct quarterly inspections for all customers in their region. Each inspection should be completed within a single visit and include all installed assets on site. Which two Maintenance Plan settings should the Consultant recommend? (Select all that apply)",
       options:[
@@ -2572,7 +2572,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Service Crews",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company needs a team to perform periodic maintenance on the most complex products. Which feature should the Consultant configure to meet this requirement?",
       options:[
@@ -2595,7 +2595,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling Work Rules",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"Which Work Rule should a Salesforce Field Service Consultant use to assign Service Resources based on related object records?",
       options:[
@@ -2619,7 +2619,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Asset Lifecycle",
+      topic:"Managing Assets",
       select:1,
       prompt:"A Company sells products that are made up of serialized components. Technicians often need to work on a specific component. How should a Consultant recommend tracking customer purchases so Work Orders can be assigned to a component?",
       options:[
@@ -2643,7 +2643,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:1,
       prompt:"A Customer wants to return a defective product instead of scheduling a Service Appointment. How should this product be tracked in Salesforce Field Service?",
       options:[
@@ -2667,7 +2667,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling Policies",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"A Company asks its clients for feedback on every service visit. A Company wants to dispatch the appropriate Technicians based on customer feedback. What are two ways the Consultant can meet this requirement? (Select all that apply)",
       options:[
@@ -2691,7 +2691,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Sharing & Territories",
+      topic:"Permissions and Sharing",
       select:1,
       prompt:"The Org-Wide sharing for a Service Appointment set to Private. If the Service Appointment is cancelled, which users will have visibility to the record?",
       options:[
@@ -2713,7 +2713,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Service Reports",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"Technicians often need to generate a report in the customer's language. Which configuration should the Consultant recommend to meet the requirement?",
       options:[
@@ -2737,7 +2737,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Territories & Hours",
+      topic:"Managing Resources",
       select:1,
       prompt:"One of A Company's customers allows maintenance only between 12 PM - 1:00 PM. On which object should a Consultant set Operating Hours to meet this requirement?",
       options:[
@@ -2761,7 +2761,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Service Reports",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"When completing a Work Order in the field, the Technician needs to capture two signatures to ensure compliance. Which steps are needed to configure the signature capture?",
       options:[
@@ -2785,7 +2785,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Skills",
+      topic:"Managing Resources",
       select:2,
       prompt:"A Company is implementing Work Order Management. What two approaches should the Consultant consider to create work skills for the Service Resources? (Select all that apply)",
       options:[
@@ -2809,7 +2809,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Licensing",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company has a call center that responds to request from customers and schedules time for Field Service Engineers (FSEs) to perform work on assets owned by the client. Call Center Agents are responsible for booking appointments. Which Permission Set License should be assigned to the Call Center Agents?",
       options:[
@@ -2833,7 +2833,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Asset Lifecycle",
+      topic:"Managing Assets",
       select:1,
       prompt:"A Company wants to report on its Assets and reflect their attributes including hierarchical relationships. How should the Consultant meet this requirement?",
       options:[
@@ -2857,7 +2857,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Skills",
+      topic:"Managing Resources",
       select:2,
       prompt:"A Company wants to schedule Work Order only if Technicians have the necessary qualifications to complete the designated work. In which two ways can A Company achieve this? (Select all that apply)",
       options:[
@@ -2881,7 +2881,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:1,
       prompt:"Each door lock that A Company sells has a unique 20 digit code. The code represents the manufacturer, production run, and production number. A Company needs to track each lock. In addition to the installed locks, all Technicians carry five replacement units in their van stock. How should a Company track the van stock door locks?",
       options:[
@@ -2905,7 +2905,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Orders & Appointments",
+      topic:"Managing Work Orders",
       select:2,
       prompt:"A Company has discovered that many of its Technicians' initial visits require a return visit to complete the work. Which two approaches should a Consultant recommend to accurately track these visits? (Select all that apply)",
       options:[
@@ -2929,7 +2929,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Licensing",
+      topic:"Permissions and Sharing",
       select:1,
       prompt:"At A Company, agents are expected to complete a variety of tasks. They create Cases and Work Orders, and need Read access to Work Types and Work Rules. They also book and manage Appointments, assign Mobile Resources, and optimize their Mobile Workforce's Schedule. What is the best Permission Set(s) a consultant should recommend assigning to A Company Agents?",
       options:[
@@ -2953,7 +2953,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling Policies",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"Customer Relationships and reliable service are main focus this year at A Company. Management has asked that once a technician has serviced a customer, they continue to service that customer when possible. What should the consultant recommend to meet this requirement?",
       options:[
@@ -2977,7 +2977,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Parts & Inventory",
+      topic:"Managing Inventory",
       select:1,
       prompt:"A Company is rolling out Inventory Management. A Company wants to automatically associate certain Parts to Work Orders upon creation based on the work to be performed. How should the Consultant meet this requirement?",
       options:[
@@ -3001,7 +3001,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Optimization",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"Optimization for the Midwest territory is set to automatically run each night for the next three days. The Dispatcher has noticed that the optimizer is leaving many Service Appointments unscheduled and has asked the Consultant to troubleshoot the issue. The Consultant notices that the Optimization Run Time per Service Appointment is set to Low in the Field Service Settings. Which two conditions would make the Consultant consider setting the optimizer to High? (Select all that apply)",
       options:[
@@ -3025,7 +3025,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Dispatch",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company wants to dispatch emergency work identified throughout the day that needs to be completed before lower-priority work. What should the Consultant recommend to meet this requirement?",
       options:[
@@ -3049,7 +3049,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Fundamentals",
+      topic:"Managing Scheduling and Optimization",
       select:3,
       prompt:"A Company wants to reduce its mean-time-to-service. Which three Field Service processes should a Consultant recommend to accomplish this goal?",
       options:[
@@ -3073,7 +3073,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatcher Console & Gantt",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"How should the Consultant recommend the highest revenue generating Service Appointments on the Gantt?",
       options:[
@@ -3097,7 +3097,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Contractor Licensing",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company outsources 100 hours of weekly maintenance to an external Contractor. Jobs are assigned to a Contractor Manager instead of individual external Technicians. The Contractor Manager is in charge of updating Service Appointments and Work Orders upon completion. How should a Consultant implement the requirement?",
       options:[
@@ -3121,7 +3121,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Entitlements & Milestones",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"Which fields on Service Appointments help ensure that they are completed within the agreed upon Service Level Agreement (SLA) with A Company's customers?",
       options:[
@@ -3145,7 +3145,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Orders & Appointments",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Company performs maintenance and repairs on Assets in the field and wants to increase first-time fix rates. What should a Consultant include when creating a Work Order?",
       options:[
@@ -3169,7 +3169,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Preventive Maintenance",
+      topic:"Configuring Maintenance Plans",
       select:2,
       prompt:"A company wants to make it easier for Managers to monitor Preventative Maintenance Work Orders using the Dispatcher Console. Which two filtering options should Managers use to find the appropriate Work Orders? (Select all that apply)",
       options:[
@@ -3193,7 +3193,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Licensing",
+      topic:"Permissions and Sharing",
       select:1,
       prompt:"A Company has enabled Salesforce Field Service and installed the managed package. A Company wants to ensure that Technicians can update their own Appointments' status using the Dispatcher Console Gantt Chart. Which steps should the Consultant take to meet these requirements?",
       options:[
@@ -3217,7 +3217,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling Policies",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company groups its technicians based on seniority. The newest techs comprise Tier 1, move to Tier 2 after a year on the job, and get assigned to Tier 3 after 3 years on the job. Resources with more seniority should be considered for a job over resources with less seniority. How should the Field Service Administrator ensure this corporate Policy is enforced considering the Customer First Scheduling Policy is utilize consistently except in emergency situations?",
       options:[
@@ -3241,7 +3241,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Asset Lifecycle",
+      topic:"Managing Assets",
       select:1,
       prompt:"A Company wants to track the work that is performed on the customer's install base. Which Object Relationship should the Consultant utilize to meet this requirement?",
       options:[
@@ -3265,7 +3265,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Complex Work & Dependencies",
+      topic:"Managing Scheduling and Optimization",
       select:3,
       prompt:"A customer makes one Appointment for the Sales department, and another Appointment for the Service department. The two Appointments should be handled on the same day, but should be created as separate Appointments. In addition, the Technician must complete one Appointment before starting the next. The Agent wants to make sure these two Appointments are scheduled together in sequence. Which three things should the Consultant verify to ensure these requirements are met and simultaneous scheduling will occur? (Choose 3 answers)",
       options:[
@@ -3289,7 +3289,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Skills & Resource Matching",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company uses two contractors, Contractor 1 and Contractor 2, to perform repair work. Contractor 1 has provided Services for a Company for a longer period of time and is considered to have more repair work expertise than Contractor 2. How should the Consultant configure the Contractors' experience?",
       options:[
@@ -3313,7 +3313,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Skills & Resource Matching",
+      topic:"Managing Resources",
       select:2,
       prompt:"A Company would like the Technician who performed a customer's initial installation to also perform any subsequent service calls. Which two actions should the Field Service Administrator take to configure Field Service to ensure the installation technician is assign to subsequent service calls? (Select all that apply)",
       options:[
@@ -3337,7 +3337,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Inventory Management",
+      topic:"Managing Inventory",
       select:1,
       prompt:"An Inventory Manager at A Company wants to better understand the distribution of a critical and expensive part across all Inventory Locations as the part is reused and restocked. What should the Consultant leverage to meet this requirement?",
       options:[
@@ -3361,7 +3361,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatcher Console & Gantt",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company wants to identify which resources need more fewer Appointments. Which Gantt chart filter option should a Consultant recommend to provide this information?",
       options:[
@@ -3385,7 +3385,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Order Lifecycle",
+      topic:"Managing Work Orders",
       select:2,
       prompt:"The CFO for A Company wants Work Orders to remain open until the Customer Service Report is signed. Which two configurations should a Consultant implement to prevent Work Orders from being closed? (Select all that apply)",
       options:[
@@ -3409,7 +3409,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Routing & Travel",
+      topic:"Managing Scheduling and Optimization",
       select:3,
       prompt:"Which three factors should a Consultant consider when configuring routing? (Select all that apply)",
       options:[
@@ -3433,7 +3433,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Territories & Hours",
+      topic:"Managing Resources",
       select:2,
       prompt:"Service Resources at A Company frequently work in more than one Service Territory. The current Scheduling Policy looks only at Primary Territory. While A Company still wants the optimizer to use the Service Resource's Primary Territory when scheduling, A Company also wants the Scheduling Policy to look at the Resource's Secondary Service Territories. Which two Scheduling Policy changes should a Consultant recommend? Choose two answers",
       options:[
@@ -3457,7 +3457,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Territories & Hours",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company wants to ensure that Service Appointments are dispatched to Resources from the same Service Territory only. How can this be configured?",
       options:[
@@ -3481,7 +3481,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Sharing & Visibility",
+      topic:"Permissions and Sharing",
       select:3,
       prompt:"Org-Wide Default sharing is set to Private in a Salesforce Org. If the Field Service Lightning User Territory feature is enabled, which three objects will be visible to users who are part of the User Territory? Choose 3 answers",
       options:[
@@ -3503,7 +3503,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Maintenance Plans",
+      topic:"Configuring Maintenance Plans",
       select:2,
       prompt:"A Company requires trained inspector to make three site visits per year to inspect containers at customer sites. These visits must be created 14 days before ne next suggested inspection date. What are two ways a Consultant can configure Maintenance Plans to meet the requirement? Choose 2 answers",
       options:[
@@ -3527,7 +3527,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Mobile App",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"A Company wants Technicians to view work progress through the Work Order Line Item card in the Salesforce Field Service Mobile App. Which configuration steps should a Consultant take to meet this requirement?",
       options:[
@@ -3551,7 +3551,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatcher Console & Gantt",
+      topic:"Managing Scheduling and Optimization",
       select:3,
       prompt:"The Dispatcher at A Company wants to schedule Service Appointments from the Dispatch Console while taking the Scheduling Policy into consideration. Which three options are available for the Dispatcher? (Select all that apply)",
       options:[
@@ -3573,7 +3573,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Mobile App",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"A Company wants their Technicians to create an additional visit to complete unfinished work within the Salesforce Field Service Mobile Application. Which approach should a Consultant recommend to meet the requirement?",
       options:[
@@ -3595,7 +3595,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Mobile App",
+      topic:"Configuring Mobility",
       select:1,
       prompt:"A Company technicians use the Field Service Mobile Application exclusively since they are always in the field. Due to frequent schedule changes, how should the Field Service Administrator ensure this requirement is met?",
       options:[
@@ -3618,7 +3618,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Inventory Management",
+      topic:"Managing Inventory",
       select:2,
       prompt:"Which two reports should a Consultant build to track the number of parts used by a Technician during a given time period? (Select all that apply)",
       options:[
@@ -3640,7 +3640,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Licensing & Permissions",
+      topic:"Permissions and Sharing",
       select:1,
       prompt:"A Company has dispatchers who can set up new territories, define new Scheduling Policies, and control settings on the Gantt chart. In addition to Field Service Lightning Dispatcher Permissions and the Field Service Dispatcher License, which permissions should a Consultant assign to the dispatchers?",
       options:[
@@ -3664,7 +3664,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Fundamentals",
+      topic:"Managing Inventory",
       select:1,
       prompt:"A Company Technicians handle different kinds of jobs, many of which involve installing or replacing parts. Having the appropriate inventory is critical to completing the jobs on time. How should the Field Service be configured to ensure the parts required for a job are listed correctly on the Work Order?",
       options:[
@@ -3688,7 +3688,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatcher Console & Gantt",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"Which two features on the Dispatcher Console should the Consultant use to visualize Rule Violating Service Appointments? Choose 2 answers",
       options:[
@@ -3712,7 +3712,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Licensing & Permissions",
+      topic:"Managing Resources",
       select:1,
       prompt:"A Company is adding Field Service Schedule Optimization to its Field Service implementation. Which Licensing will be required for the Field Service Schedule Optimization user?",
       options:[
@@ -3736,7 +3736,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Skills & Resource Matching",
+      topic:"Managing Resources",
       select:1,
       prompt:"Technicians earn certifications that must be renewed periodically to ensure their skills remain up to date. How can these certifications be managed on the Resource?",
       options:[
@@ -3760,7 +3760,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Dispatch",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"The service director at A Company would like to understand the effect that service objectives have on the assignment of Service Appointments to Service Resources. Where can the director view Service Objective scores for potential appointment time slots?",
       options:[
@@ -3784,7 +3784,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Scheduling & Dispatch",
+      topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"A Company wants to increase customer satisfaction by committing Preferred Resources to Accounts and providing prompt service. Which two default Scheduling Policies meet this requirement. (Select all that apply)",
       options:[
@@ -3808,7 +3808,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Field Service Mobile App",
+      topic:"Configuring Mobility",
       select:2,
       prompt:"The System Administrator at A Company creates custom actions on the Work Order object. Field technicians report that the actions are visible while using the Salesforce Mobile App but not visible in the Field Service Mobile App. What are two reasons why the actions only display in the Salesforce Mobile App? (Select all that apply)",
       options:[
@@ -3832,7 +3832,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Entitlements & Milestones",
+      topic:"Managing Work Orders",
       select:3,
       prompt:"A Company wants to implement Service Level Agreement (SLA) for Work Orders. Which three considerations should the Consultant take into account? (Select all that apply)",
       options:[
@@ -3856,7 +3856,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Licensing & Permissions",
+      topic:"Managing Resources",
       select:1,
       prompt:"An employee at A Company performs the role of a Dispatcher and a Technician. How should a Consultant configure Salesforce Field Service to support this behavior?",
       options:[
@@ -3880,7 +3880,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Dispatcher Console & Gantt",
+      topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company provides prompt service and has multiple service levels for different customers. Over 50% of Service Appointments created on the same day that they need to completed. As a result, a Technician's daily schedule can change multiple times throughout the day. Which method of dispatching should a Consultant recommend implementing?",
       options:[
@@ -3903,7 +3903,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Territories & Hours",
+      topic:"Managing Resources",
       select:2,
       prompt:"A Company just started its Field Service Implementation and is configuring Service Territories and Locations. The Locations need to be associated to Territories. In which two ways should the Consultant show this relationship? Choose 2 answers",
       options:[
@@ -3923,7 +3923,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Entitlements & Case Management",
+      topic:"Managing Work Orders",
       select:1,
       prompt:"A Company currently tracks its customers' entitlements to support utilizing Salesforce Service Cloud. Service calls that require a Technician to go to the customer's location require the creation of a Work Order. Once the Agent confirms that the Customer and product are eligible for on-site support, a Work Order is manually created. On which object should the Consultant define a Quick Action to create the Work Order?",
       options:[
@@ -3943,7 +3943,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Crew Management",
+      topic:"Managing Resources",
       select:2,
       prompt:"A Company wants to use crews to service its customers. A Company's consultant recommends using the Crew Management tool to create and maintain the crews, and indicates that access to the tool is given via a permission set. Which two Permission Sets should give access to the Crew Management tool? Choose 2 answers",
       options:[
@@ -3963,7 +3963,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Maintenance Plans",
+      topic:"Configuring Maintenance Plans",
       select:1,
       prompt:"A Company wants to offer customers a Maintenance Plan that provides 12 monthly checkups. The customer will call to schedule each visit. How should a Consultant configure the Maintenance Plan to meet this requirement?",
       options:[
@@ -3987,7 +3987,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Work Types",
+      topic:"Managing Work Orders",
       select:3,
       prompt:"Which three objects are associated to the Work Type? Choose 3 answers",
       options:[
@@ -4032,12 +4032,31 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
     return a;
   };
 
-  // A shuffled permutation of DATA's indices — the order tickets are displayed in.
-  const buildOrder = () => shuffleArray(DATA.map((_, i) => i));
+  // A shuffled permutation of DATA's indices — the order tickets are displayed
+  // in. Pass a subset of indices to shuffle just that subset (used to build a
+  // single-section queue); omit it for the full 171-ticket deck.
+  const buildOrder = (indices) => shuffleArray(indices || DATA.map((_, i) => i));
+
+  // The 8 official exam domains, in exam-weight order — every ticket's topic
+  // is one of these (see the topic remap), so this doubles as the section list.
+  const SECTION_ORDER = [
+    "Managing Scheduling and Optimization",
+    "Managing Work Orders",
+    "Managing Resources",
+    "Configuring Mobility",
+    "Managing Inventory",
+    "Managing Assets",
+    "Configuring Maintenance Plans",
+    "Permissions and Sharing"
+  ];
+
+  // Ticket indices whose topic matches a given section name, in DATA order.
+  const sectionIndices = (name) => DATA.reduce((acc, q, i) => (q.topic === name ? [...acc, i] : acc), []);
 
   const freshState = () => ({
     index:0,
     finished:false,
+    section:"",
     order: buildOrder(),
     answers:DATA.map(() => ({selected:new Set(), checked:false, correct:null}))
   });
@@ -4056,19 +4075,25 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
         correct: a.correct === true ? true : (a.correct === false ? false : null)
       }));
 
+      // A saved section must be "" (all sections) or one of the 8 exam domains.
+      const section = typeof saved.section === "string" && (saved.section === "" || SECTION_ORDER.includes(saved.section))
+        ? saved.section
+        : "";
+
       // Nothing attempted yet — deal a freshly shuffled deck on every reload.
       // Once at least one ticket is checked, the deck order freezes so a
       // reload resumes the exact same shuffle instead of scrambling it again.
       const anyTraversed = answers.some((a) => a.checked);
       if (!anyTraversed) {
-        return { index:0, finished:false, order: buildOrder(), answers };
+        return { index:0, finished:false, section, order: buildOrder(section ? sectionIndices(section) : undefined), answers };
       }
 
-      // A saved order can be the full deck OR a shorter "review mode" queue
-      // (just the previously-wrong tickets) — accept any length from 1 up to
-      // DATA.length, as long as every entry is a distinct valid index, so a
-      // reload during a review round resumes that same reduced queue instead
-      // of discarding it back to the full shuffled deck.
+      // A saved order can be the full deck, a single-section queue, OR a
+      // shorter "review mode" queue (just the previously-wrong tickets) —
+      // accept any length from 1 up to DATA.length, as long as every entry is
+      // a distinct valid index, so a reload during a section or review round
+      // resumes that same reduced queue instead of discarding it back to the
+      // full shuffled deck.
       const validOrder = Array.isArray(saved.order)
         && saved.order.length >= 1
         && saved.order.length <= DATA.length
@@ -4080,6 +4105,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       return {
         index: Math.max(0, Math.min(order.length - 1, Number(saved.index) || 0)),
         finished: !!saved.finished,
+        section,
         order,
         answers
       };
@@ -4095,6 +4121,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       const serializable = {
         index: state.index,
         finished: state.finished,
+        section: state.section,
         order: state.order,
         answers: state.answers.map((a) => ({
           selected: [...a.selected],
@@ -4120,7 +4147,37 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
     stats: document.getElementById("stats"),
     queue: document.getElementById("queue"),
     ticket: document.getElementById("ticket"),
-    shift: document.getElementById("shift")
+    shift: document.getElementById("shift"),
+    sectionSelect: document.getElementById("sectionSelect")
+  };
+
+  // Fills the "Practice section" dropdown once (the domain list and their
+  // ticket counts are static) and reflects whatever section is active.
+  const populateSectionPicker = () => {
+    if (!els.sectionSelect) return;
+    const allOption = `<option value="">All sections (${DATA.length})</option>`;
+    const sectionOptions = SECTION_ORDER.map((name) => {
+      const count = sectionIndices(name).length;
+      return `<option value="${esc(name)}">${esc(name)} (${count})</option>`;
+    }).join("");
+    els.sectionSelect.innerHTML = allOption + sectionOptions;
+    els.sectionSelect.value = state.section || "";
+  };
+
+  // Switches the active queue to a single section (or back to "All sections"
+  // when name is ""). Existing answers are kept as-is — jumping between
+  // sections never erases progress — only the order/position/finished flag
+  // change, exactly like starting a review round.
+  const selectSection = (name) => {
+    const valid = name === "" || SECTION_ORDER.includes(name);
+    state.section = valid ? name : "";
+    state.order = buildOrder(state.section ? sectionIndices(state.section) : undefined);
+    state.index = 0;
+    state.finished = false;
+    if (els.sectionSelect) els.sectionSelect.value = state.section;
+    saveState();
+    renderAll();
+    document.getElementById("ticket")?.scrollIntoView({behavior:"smooth", block:"start"});
   };
 
   const esc = (s) => s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
@@ -4171,7 +4228,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
 
   const finishQuiz = () => {
     state.finished = true;
-    reshuffleDeck();
+    state.index = 0;
     saveState();
     renderAll();
     document.getElementById("shift")?.scrollIntoView({behavior:"smooth", block:"start"});
@@ -4181,8 +4238,9 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
   // prior selection so they can be attempted fresh, and drops back into the
   // ticket view starting at the first one. Correctly-answered tickets are
   // left untouched — once every missed ticket is checked again, "End of
-  // shift" naturally reappears (it triggers off the full DATA set, not the
-  // review-only queue) with the updated score.
+  // shift" naturally reappears (it triggers off the queue that was just
+  // finished — the full deck, a section, or a previous review round — not
+  // always the full DATA set) with the updated score.
   const reviewErrors = (wrongOriginalIdx) => {
     if (!wrongOriginalIdx || !wrongOriginalIdx.length) return;
     wrongOriginalIdx.forEach((qi) => {
@@ -4304,13 +4362,48 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
   };
 
   const renderShift = () => {
-    const total = DATA.length;
-    const resolved = state.answers.filter((a) => a.checked).length;
+    // Scoped to the CURRENT queue (state.order) rather than the full DATA
+    // set, so this works the same whether that queue is the full 171-ticket
+    // deck, a single section, or a review-errors round.
+    const total = state.order.length;
+    const resolved = state.order.filter((qi) => state.answers[qi].checked).length;
     if (resolved < total) { els.shift.innerHTML = ""; return; }
 
-    const correct = state.answers.filter((a) => a.correct).length;
-    const wrongOriginalIdx = state.answers.reduce((acc, a, qi) => (a.correct ? acc : [...acc, qi]), []);
+    const correct = state.order.filter((qi) => state.answers[qi].correct).length;
+    const wrongOriginalIdx = state.order.filter((qi) => !state.answers[qi].correct);
     const pct = Math.round((correct / total) * 100);
+    const scopeLabel = state.section ? esc(state.section) : "all sections";
+
+    // Score broken down by exam domain (topic), for whatever categories are
+    // actually present in the current queue — the full deck touches all 8,
+    // a section touches just 1, a review round touches whichever categories
+    // its wrong tickets came from. Skipped entirely when there's only one
+    // category present, since it would just repeat the overall score line.
+    const byCategory = {};
+    state.order.forEach((qi) => {
+      const topic = DATA[qi].topic;
+      const bucket = byCategory[topic] || (byCategory[topic] = { correct: 0, total: 0 });
+      bucket.total++;
+      if (state.answers[qi].correct) bucket.correct++;
+    });
+    const categoryNames = Object.keys(byCategory);
+    const orderedCategoryNames = SECTION_ORDER.filter((name) => byCategory[name])
+      .concat(categoryNames.filter((name) => !SECTION_ORDER.includes(name))); // safety net, shouldn't happen
+    const categoryBreakdownHtml = orderedCategoryNames.length > 1
+      ? `<div class="category-breakdown">
+          <span class="ref-label" style="display:block;">By category</span>
+          ${orderedCategoryNames.map((name) => {
+            const b = byCategory[name];
+            const catPct = Math.round((b.correct / b.total) * 100);
+            const barColor = catPct >= 80 ? "var(--good)" : catPct < 50 ? "var(--bad)" : "var(--accent)";
+            return `<div class="cat-row">
+                <span class="cat-name">${esc(name)}</span>
+                <div class="cat-bar"><div class="cat-bar-fill" style="width:${catPct}%; background:${barColor};"></div></div>
+                <span class="cat-score mono">${b.correct}/${b.total} · ${catPct}%</span>
+              </div>`;
+          }).join("")}
+        </div>`
+      : "";
 
     const reviewHtml = wrongOriginalIdx.length
       ? `<div class="review-chips">${wrongOriginalIdx.map((qi) => {
@@ -4326,13 +4419,14 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
     els.shift.innerHTML = `
       <div class="shift">
         <h2>End of shift</h2>
-        <p>All ${total} tickets resolved.</p>
+        <p>All ${total} tickets resolved — ${scopeLabel}.</p>
         <div class="score-line">Score: ${correct}/${total} - ${pct}%</div>
         <div class="row">
           <div><div class="num">${correct} / ${total}</div><div class="lbl">Correct</div></div>
           <div><div class="num">${pct}%</div><div class="lbl">Accuracy</div></div>
         </div>
-        ${wrongOriginalIdx.length ? `<span class="ref-label" style="margin-bottom:8px;display:block;">Tickets to review</span>` : ""}
+        ${categoryBreakdownHtml}
+        ${wrongOriginalIdx.length ? `<span class="ref-label" style="margin-bottom:8px;display:block;margin-top:${categoryBreakdownHtml ? "16px" : "0"};">Tickets to review</span>` : ""}
         ${reviewHtml}
         ${reviewErrorsBtnHtml}
       </div>`;
@@ -4355,11 +4449,16 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
     els.ticket.style.display = state.finished ? "none" : "";
   };
 
+  populateSectionPicker();
+  els.sectionSelect?.addEventListener("change", (e) => selectSection(e.target.value));
+
   document.getElementById("resetAll").addEventListener("click", () => {
     state.finished = false;
+    state.section = "";
     state.answers = DATA.map(() => ({selected:new Set(), checked:false, correct:null}));
     reshuffleDeck();
     saveState();
+    if (els.sectionSelect) els.sectionSelect.value = "";
     renderAll();
   });
 
