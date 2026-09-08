@@ -302,7 +302,7 @@
     {
       topic:"Service Appointment Workflow",
       select:1,
-      prompt:"Universal Containers has Role-based Technicians and Managers who handle Service Appointments. Many times, Technicians arrive on-site but are unable to gain access to the customer's equipment. In this scenario, only the Manager has permission to cancel the Service Appointment. Who should a Consultant recommend adhering to this business process?",
+      prompt:"Universal Containers has Role-based Technicians and Managers who handle Service Appointments. Many times, Technicians arrive on-site but are unable to gain access to the customer's equipment. In this scenario, only the Manager has permission to cancel the Service Appointment. How should a Consultant configure Status Transitions to enforce this business process?",
       options:[
         {k:"A", t:"Assign Permission Sets that allow Status Transitions."},
         {k:"B", t:"Allow Status Transitions based on Role."},
