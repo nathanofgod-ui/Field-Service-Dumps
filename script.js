@@ -143,25 +143,25 @@
     },
     {
       topic:"Managing Inventory",
-      select:1,
-      prompt:"An inventory manager at Universal Containers wants to better understand the distribution of a critical and expensive part across all inventory locations as the part is reused and restocked. What should the Consultant leverage to meet this requirement?",
+      select:3,
+      prompt:"A Company wants to track Technicians' van stock using the Salesforce Field Service Mobile App and ensure that Technicians report when parts are used. Which three data elements should a Consultant recommend tracking to support these requirements? Choose 3 answers",
       options:[
-        {k:"A", t:"Assets"},
-        {k:"B", t:"Maintenance Plan"},
-        {k:"C", t:"Product Item"},
-        {k:"D", t:"Entitlement Plan"}
+        {k:"A", t:"Products Required"},
+        {k:"B", t:"Products Consumed"},
+        {k:"C", t:"Warehouse Locations"},
+        {k:"D", t:"Inventory"}
       ],
-      correct:["C"],
+      correct:["A","B","D"],
       explanation:
-`**Why C is right.** "Product items track the quantity of a particular product at a location," per Salesforce Help — that's the exact pairing needed. A Product Item record exists per Product per Location, so filtering or reporting on all Product Item records for that part shows exactly how many units sit at each warehouse, van, or other stocking point, and it updates naturally as the part is consumed, transferred, or restocked.
+`**Why A, B, and D are right.** Together these three cover the full loop a mobile-app-based van stock process needs: what a job requires, what's actually on hand, and what got used. Products Required lists what a technician needs to bring for a given job — the checklist that gets checked against van stock before and during the visit. Inventory (Product Item records) tracks the real, current quantity of each product at the technician's van location — "Product items list a quantity at the location that is updated automatically when inventory is transferred or consumed." And Products Consumed is exactly what "report when parts are used" calls for: "When a product is consumed during the completion of a work order, track its consumption by creating a product consumed record," which automatically decrements the linked Product Item, keeping the van's tracked stock accurate after every job.
 
-**Why A is wrong.** Assets represent a specific unit sold or installed at a customer — a customer-facing installed base, not warehouse/van stock levels.
+**Why C is wrong.** A technician's van isn't modeled as a Warehouse in Salesforce's data model — it's a Mobile Location. The Location object's IsMobile field is described with exactly this example: "Indicates whether the location moves. For example, a truck or tool box." Salesforce's own documentation even separates the two in the same breath: "Service territory locations are warehouses, customer sites, or vehicles" — treating warehouses and vehicles as distinct categories, not one covering the other. So "Warehouse Locations" is the wrong location concept for tracking a van's stock.
 
-**Why B is wrong.** Maintenance Plans generate recurring preventive-maintenance work orders on a schedule; they say nothing about how many spare units exist across locations.
-
-**Why D is wrong.** Entitlement Plans define support/warranty terms — a service-contract construct entirely unrelated to physical inventory counts.`,
+*Note: this question's answer choices don't include "Mobile Locations" as an option (unlike the closely related question above) — among what's actually offered here, Products Required is the best available third element.*`,
       sources:[
-        {l:"Product Item and Inventory Fields — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=sf.fs_parts_fields.htm&language=en_US&type=5"}
+        {l:"Field Service Inventory Management Data Model — Field Service Developer Guide", u:"https://developer.salesforce.com/docs/atlas.en-us.field_service_dev.meta/field_service_dev/fsl_dev_soap_inventory.htm"},
+        {l:"Location — Field Service Developer Guide", u:"https://developer.salesforce.com/docs/atlas.en-us.field_service_dev.meta/field_service_dev/sforce_api_objects_location.htm"},
+        {l:"Create Inventory Locations for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=service.fs_create_locations.htm&language=en_US&type=5"}
       ]
     },
     {
@@ -187,26 +187,6 @@
         {l:"Field Service License Types: Dispatcher vs Technician", u:"https://salesforcenegotiations.com/field-service-license-types-dispatcher-vs-technician-and-more/"},
         {l:"Create Service Resources for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=service.fs_create_resources.htm&language=en_US&type=5"},
         {l:"Field Service Permission Set Licenses", u:"https://blog.bhanuprakashsfdc.com/field-service-permission-set-licenses/"}
-      ]
-    },
-    {
-      topic:"Managing Resources",
-      select:1,
-      prompt:"Universal Containers plans to deploy Salesforce Field Service to 100 external contractors. There are 75 contractors who need access to Work Orders, Assets, Mobile App, and Chatter. The remaining 25 contractors are paid a commission on sales of containers and need to schedule resources. Which license types and quantities should the Consultant recommend?",
-      options:[
-        {k:"A", t:"75 Contractor, 25 Contractor Plus"},
-        {k:"B", t:"100 Contractor, 100 Contractor Plus"},
-        {k:"C", t:"25 Contractor, 75 Contractor Plus"},
-        {k:"D", t:"25 Contractor, 100 Contractor Plus"}
-      ],
-      correct:["A"],
-      explanation:
-`**Why A is right.** Contractor covers the baseline needs: mobile app access, viewing/managing assigned Work Orders, submitting updates — matching the 75 who only need Work Orders, Assets, Mobile App, and Chatter. Contractor Plus adds Scheduling & Optimization / Dispatcher Console access plus Lead Management and Opportunity Tracking for cross-sell/upsell — a precise match for the 25 who earn commission on sales (the revenue piece) and need to schedule resources (the scheduling piece). Matching headcount to the feature boundary keeps 75 users on the cheaper tier and puts only the 25 who need it on the premium one.
-
-**Why B, C, and D are wrong.** B double-licenses everyone with both tiers unnecessarily. C reverses the split, leaving the commissioned group without the scheduling/opportunity features they need while over-licensing the basic 75. D licenses all 100 with Contractor Plus on top of 25 Contractor licenses — 125 total licenses for 100 people, paying premium pricing for 75 users who don't need it.`,
-      sources:[
-        {l:"Salesforce Field Service Pricing — Contractor vs. Contractor Plus", u:"https://www.salesforce.com/service/field-service-management/pricing/"},
-        {l:"Field Service Lightning Pricing and License Types — rockITdata", u:"https://rockitdata.com/02/salesforce-field-service-lightning-pricing-and-license-types/"}
       ]
     },
     {
@@ -441,30 +421,6 @@
       sources:[
         {l:"Create Work Types for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?language=en_US&id=service.fs_create_work_types.htm&type=5"},
         {l:"Creating Work Types for Field Service — Trailhead", u:"https://trailhead.salesforce.com/content/learn/projects/modify-the-field-service-center/create-a-work-type"}
-      ]
-    },
-    {
-      topic:"Configuring Mobility",
-      select:1,
-      prompt:"A Company wants technicians to view work progress through the work order line-item in the field service lightning mobile app. Which configuration steps should a consultant take to meet this requirement?",
-      options:[
-        {k:"A", t:"Create a custom lightning component that displays work order progress and deploy it to technicians through the field service lightning mobile app."},
-        {k:"B", t:"Add the work order line items related list of the work order page layout and assign the layout to the technician's profile."},
-        {k:"C", t:"Create a report chart that summarizes work order line items and add a link to the service appointment layout."},
-        {k:"D", t:"Create a custom Visualforce page and add an external link in the field service lightning mobile app to view the page in the mobile browser."}
-      ],
-      correct:["B"],
-      explanation:
-`**Why B is right.** The Field Service mobile app surfaces related records through a "Related" tab that mirrors whatever related lists are configured on the underlying object's page layout — the same mechanism Salesforce documents for Knowledge articles, where technicians "tap Related in the work order carousel" to see records attached via the Work Order's page layout. Work Order Line Items are a standard related list on the Work Order object, so putting it on the page layout assigned to the technician's profile is all that's needed — the mobile app then shows live line-item progress under that Related tab with zero custom development. It's also the lowest-cost, most maintainable option: pure declarative configuration, no code to build or support.
-
-**Why A is wrong.** Unnecessary custom development for something the platform already exposes natively via a related list — adds build and maintenance cost with no functional benefit over B.
-
-**Why C is wrong.** A report chart is a static/aggregate summary, not the live, individual Work Order Line Item records technicians need to track real-time job progress against — and linking it from the Service Appointment layout doesn't put it where line-item status actually lives.
-
-**Why D is wrong.** This routes technicians out of the Field Service mobile app into a separate browser view — extra custom code and a worse in-app experience, when the standard related list already renders inside the app itself.`,
-      sources:[
-        {l:"View Knowledge Articles in the Field Service Mobile App — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=service.mfs_knowledge.htm&language=en_US&type=5"},
-        {l:"Guidelines for Creating Service Appointments — Salesforce Help", u:"https://help.salesforce.com/s/articleView?language=en_US&id=sf.fs_appointment_guidelines.htm&type=5"}
       ]
     },
     {
@@ -896,6 +852,28 @@
       ]
     },
     {
+      topic:"Managing Resources",
+      select:1,
+      prompt:"Universal Containers plans to deploy Salesforce Field Service to 100 external contractors. There are 75 contractors who need access to Work Orders, Assets, Mobile App, and Chatter. The remaining 25 contractors are paid a commission on sales of containers and need to schedule resources. Which license types and quantities should the Consultant recommend?",
+      options:[
+        {k:"A", t:"75 Contractor, 25 Contractor Plus"},
+        {k:"B", t:"100 Contractor, 100 Contractor Plus"},
+        {k:"C", t:"25 Contractor, 75 Contractor Plus"},
+        {k:"D", t:"25 Contractor, 100 Contractor Plus"}
+      ],
+      correct:["A"],
+      explanation:
+`**Why A is right.** Contractor covers the baseline needs: mobile app access, viewing/managing assigned Work Orders, submitting updates — matching the 75 who only need Work Orders, Assets, Mobile App, and Chatter. Contractor Plus adds Scheduling & Optimization / Dispatcher Console access plus Lead Management and Opportunity Tracking for cross-sell/upsell — a precise match for the 25 who earn commission on sales (the revenue piece) and need to schedule resources (the scheduling piece). Matching headcount to the feature boundary keeps 75 users on the cheaper tier and puts only the 25 who need it on the premium one.
+
+**Why B, C, and D are wrong.** B double-licenses everyone with both tiers unnecessarily. C reverses the split, leaving the commissioned group without the scheduling/opportunity features they need while over-licensing the basic 75. D licenses all 100 with Contractor Plus on top of 25 Contractor licenses — 125 total licenses for 100 people, paying premium pricing for 75 users who don't need it.
+
+*Note: this is the same underlying license split as the question above, phrased with plain "Contractor"/"Contractor Plus" labels instead of "Full Access"/"Limited Access" — kept separate since the answer choices themselves are worded differently.*`,
+      sources:[
+        {l:"Salesforce Field Service Pricing — Contractor vs. Contractor Plus", u:"https://www.salesforce.com/service/field-service-management/pricing/"},
+        {l:"Field Service Lightning Pricing and License Types — rockITdata", u:"https://rockitdata.com/02/salesforce-field-service-lightning-pricing-and-license-types/"}
+      ]
+    },
+    {
       topic:"Managing Work Orders",
       select:1,
       prompt:"A company wants its technician to follow a standard operation procedure (SOP) while performing maintenance on an individual Asset. Each operation should be captured independently to allow technician to enter note and update status as they progress with the work. Preventative maintenance should be with a single visit. Which data model should the consultant recommend to the company?",
@@ -1060,27 +1038,6 @@
       ]
     },
     {
-      topic:"Managing Inventory",
-      select:3,
-      prompt:"A Company wants to track Technicians' van stock using the Salesforce Field Service Mobile App and ensure that Technicians report when parts are used. Which three data elements should a Consultant recommend tracking to support these requirements? Choose 3 answers",
-      options:[
-        {k:"A", t:"Products Required"},
-        {k:"B", t:"Products Consumed"},
-        {k:"C", t:"Warehouse Locations"},
-        {k:"D", t:"Inventory"}
-      ],
-      correct:["A","B","D"],
-      explanation:
-`**Why A, B, and D are right.** Together these three cover the full loop a mobile-app-based van stock process needs: what a job requires, what's actually on hand, and what got used. Products Required lists what a technician needs to bring for a given job — the checklist that gets checked against van stock before and during the visit. Inventory (Product Item records) tracks the real, current quantity of each product at the technician's van location — "Product items list a quantity at the location that is updated automatically when inventory is transferred or consumed." And Products Consumed is exactly what "report when parts are used" calls for: "When a product is consumed during the completion of a work order, track its consumption by creating a product consumed record," which automatically decrements the linked Product Item, keeping the van's tracked stock accurate after every job.
-
-**Why C is wrong.** A technician's van isn't modeled as a Warehouse in Salesforce's data model — it's a Mobile Location. The Location object's IsMobile field is described with exactly this example: "Indicates whether the location moves. For example, a truck or tool box." Salesforce's own documentation even separates the two in the same breath: "Service territory locations are warehouses, customer sites, or vehicles" — treating warehouses and vehicles as distinct categories, not one covering the other. So "Warehouse Locations" is the wrong location concept for tracking a van's stock.`,
-      sources:[
-        {l:"Field Service Inventory Management Data Model — Field Service Developer Guide", u:"https://developer.salesforce.com/docs/atlas.en-us.field_service_dev.meta/field_service_dev/fsl_dev_soap_inventory.htm"},
-        {l:"Location — Field Service Developer Guide", u:"https://developer.salesforce.com/docs/atlas.en-us.field_service_dev.meta/field_service_dev/sforce_api_objects_location.htm"},
-        {l:"Create Inventory Locations for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=service.fs_create_locations.htm&language=en_US&type=5"}
-      ]
-    },
-    {
       topic:"Managing Scheduling and Optimization",
       select:2,
       prompt:"Service Appointments in a \"Cannot Complete\" Status may indicate that an additional part or expert assistance is needed to complete the work. A Company defined that Service Appointments in a \"Cannot Complete\" Status are unable to be rescheduled or unscheduled for history tracking purposes. Which two items should the consultant recommend to meet the requirement? Choose 2 answers",
@@ -1150,7 +1107,7 @@
     {
       topic:"Configuring Maintenance Plans",
       select:2,
-      prompt:"A Company requires a trained inspectors to make 3 site per year to inspect the container customer's sites. These visits must be scheduled within 14 days of inspection due date. What are two ways a Consultant can configure maintenance plans to meet the requirements? Choose 2 answers",
+      prompt:"A Company requires a trained inspector to make three site visits per year to inspect containers at customer sites. These visits must be created 14 days before the next suggested inspection date. What are two ways a Consultant can configure Maintenance Plans to meet the requirement? Choose 2 answers",
       options:[
         {k:"A", t:"Associate Work Type called Site to Maintenance Plan"},
         {k:"B", t:"Auto generate Work Order with a 14 days generation horizon"},
@@ -1497,30 +1454,6 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Managing Resources",
-      select:1,
-      prompt:"An employee at A Company performs the role of a dispatcher and a technician. How should a consultant configure the field service lightning to support this behavior?",
-      options:[
-        {k:"A", t:"Create two Skills records and assign them to Services Resources record"},
-        {k:"B", t:"Create two Service Resources and assign them to the employee"},
-        {k:"C", t:"Create one Service Resource and assign the technician and dispatcher role"},
-        {k:"D", t:"Create one Service Resource and Assign the relevant Permissions Set License"}
-      ],
-      correct:["D"],
-      explanation:
-`**Why D is right.** A Service Resource represents one real person, tied to a single User record — it's the object that lets someone be scheduled and dispatched as a technician. Since this is one employee doing both jobs, they still only need one Service Resource. What changes is the underlying User's access: assigning the relevant Permission Set License (the Field Service Dispatcher permission set license, alongside whatever license already gives them technician/mobile access) is what unlocks the Dispatcher Console for that same person, on top of their existing technician capabilities. One person, one Service Resource, and the extra permission set license is what grants the second role's capabilities.
-
-**Why A is wrong.** Skills represent competencies or certifications (like "Electrical" or "HVAC Certified") used for skill-based matching during scheduling — they have nothing to do with granting dispatcher-level system access or console permissions.
-
-**Why B is wrong.** Service Resource is meant to represent one real person; creating two Service Resource records for the same employee would duplicate them in the resource pool, distort utilization and capacity reporting, and create confusion about which record actually reflects the person's true availability and workload.
-
-**Why C is wrong.** There's no field or mechanism on Service Resource called "role" that you set to a combined value like "technician and dispatcher" — that's not an actual configuration step in Field Service. Access to dispatcher capabilities comes from permission set licenses and permission sets assigned at the User level, not from a role field on the resource record.`,
-      sources:[
-        {l:"Create Service Resources for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=service.fs_create_resources.htm&language=en_US&type=5"},
-        {l:"Field Service Permission Set Licenses — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=000383184&language=en_US&type=1"}
-      ]
-    },
-    {
       topic:"Managing Work Orders",
       select:2,
       prompt:"Time Sheet Entries can be associated to which two objects? Choose 2 answers",
@@ -1804,31 +1737,6 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       sources:[
         {l:"Add Required Skills to Work Orders or Work Types for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=service.fs_required_skills.htm&language=en_US&type=5"},
         {l:"SkillRequirement — Field Service Developer Guide", u:"https://developer.salesforce.com/docs/atlas.en-us.field_service_dev.meta/field_service_dev/sforce_api_objects_skillrequirement.htm"}
-      ]
-    },
-    {
-      topic:"Managing Work Orders",
-      select:3,
-      prompt:"Which three objects are associate to the Work Type? (Select all that apply)",
-      options:[
-        {k:"A", t:"Resources"},
-        {k:"B", t:"Skill Requirements"},
-        {k:"C", t:"Service Appointments"},
-        {k:"D", t:"Work Orders"}
-      ],
-      correct:["B","C","D"],
-      explanation:
-`**Why B is right.** The Field Service Developer Guide describes Skill Requirement's parent-linking field, RelatedRecordId, as polymorphic: "can be a work order, work order line item, work type, or pending service routing record." Work Type is one of the documented valid parents for a Skill Requirement — which is exactly the mechanism that lets a Work Type template carry its own set of required skills and levels.
-
-**Why C is right.** Salesforce's own Service Appointment field reference confirms this directly: Service Appointment has a "Work Type" field, described as "the work type associated with the service appointment" (read-only, inherited from parent). So a Service Appointment carries a real, documented link back to the Work Type of the job it belongs to.
-
-**Why D is right.** Work Order has a Work Type lookup field, and Salesforce's own documentation describes the relationship from the other direction too: "Adding a work type to a work order... causes the record to inherit the work type's duration values and required skills and products." That inheritance mechanism only works because Work Order is directly associated with Work Type via that lookup.
-
-**Why A is wrong.** There's no field or relationship connecting Service Resource to Work Type in the Field Service data model — Service Resource's fields (Location, Resource Type, Service Crew, and so on) contain nothing that references Work Type. Matching a resource to a job happens indirectly, through Skill Requirements and the Match Skills work rule comparing the resource's own assigned Skills against what the Work Type/Work Order requires — not through any direct Work Type–to–Resource link.`,
-      sources:[
-        {l:"SkillRequirement — Field Service Developer Guide", u:"https://developer.salesforce.com/docs/atlas.en-us.field_service_dev.meta/field_service_dev/sforce_api_objects_skillrequirement.htm"},
-        {l:"Service Appointment Fields for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?language=en_US&id=service.fs_appointment_fields.htm&type=5"},
-        {l:"Create Work Types for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?language=en_US&id=service.fs_create_work_types.htm&type=5"}
       ]
     },
     {
@@ -2504,7 +2412,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
     {
       topic:"Configuring Maintenance Plans",
       select:2,
-      prompt:"Which two scenarios are full supported by Maintenance Plans?",
+      prompt:"Which two scenarios are fully supported by Maintenance Plans?",
       options:[
         {k:"A", t:"Site inspections during the first week of the year"},
         {k:"B", t:"Quarterly sales visits to a customer"},
@@ -3503,30 +3411,6 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Configuring Maintenance Plans",
-      select:2,
-      prompt:"A Company requires trained inspector to make three site visits per year to inspect containers at customer sites. These visits must be created 14 days before ne next suggested inspection date. What are two ways a Consultant can configure Maintenance Plans to meet the requirement? Choose 2 answers",
-      options:[
-        {k:"A", t:"Auto-generate Work Orders with a 14 day Generation Time frame."},
-        {k:"B", t:"Associate a Work Type called Site Visit to a Maintenance Plan."},
-        {k:"C", t:"Associate a Required Skill called Site Visit to a Maintenance Plan."},
-        {k:"D", t:"Auto-generate Work Orders with a 14 day Generation Horizon."}
-      ],
-      correct:["B", "D"],
-      explanation:
-`**Why D is right.** Generation Horizon (Days) is the exact field for this lead-time requirement — Salesforce defines it as: "The next batch of work orders is generated this number of days before the maintenance plan's Date of the first work order in the next batch [the Next Suggested Maintenance Date]." Setting Generation Horizon to 14 means the batch job creates the upcoming inspection's Work Order (and, depending on settings, its Service Appointment) exactly 14 days ahead of the next suggested inspection date — precisely what "created 14 days before the next suggested inspection date" is asking for.
-
-**Why B is right.** Work Type is a real, first-class field on Maintenance Plan ("The associated work type"), and it's what stamps every auto-generated Work Order with the correct template — duration, description, skill requirements, and pricing that belong to a container inspection. Associating a "Site Visit" Work Type to the plan ensures each of the three yearly generated Work Orders is correctly typed as a site-visit inspection rather than a generic, unconfigured record.
-
-**Why A is wrong.** Generation Timeframe is a real field too, but it controls something different: "how far in advance work orders are generated in each batch" — i.e., the total span of future work orders created in one generation run (say, a year's worth at once), not how many days before an individual suggested date a batch fires. Setting it to 14 days wouldn't create lead time before the inspection date; it would just make each generation batch only look 14 days into the future, which doesn't match the requirement.
-
-**Why C is wrong.** Maintenance Plan has no "Required Skill" association field. Skill requirements for the generated work flow through the Work Type (option B) or get added directly on the resulting Work Order — there's no separate "Required Skill" relationship configured at the plan level the way this option describes.`,
-      sources:[
-        {l:"Maintenance Plan Fields — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=sf.fs_maintenance_fields.htm&language=en_US&type=5"},
-        {l:"Guidelines for Generating Work Orders from a Maintenance Plan — Salesforce Help", u:"https://help.salesforce.com/s/articleView?language=en_US&id=service.fs_generate_work_orders_plan.htm&type=5"}
-      ]
-    },
-    {
       topic:"Configuring Mobility",
       select:1,
       prompt:"A Company wants Technicians to view work progress through the Work Order Line Item card in the Salesforce Field Service Mobile App. Which configuration steps should a Consultant take to meet this requirement?",
@@ -3548,28 +3432,6 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       sources:[
         {l:"Let Users Create Work Order Line Items in the Field Service Mobile App — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=mfs_wo_line_item.htm&language=en_US&type=5"},
         {l:"Work Order Line Item Fields for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=sf.wo_line_item_fields.htm&language=en_US&type=5"}
-      ]
-    },
-    {
-      topic:"Managing Scheduling and Optimization",
-      select:3,
-      prompt:"The Dispatcher at A Company wants to schedule Service Appointments from the Dispatch Console while taking the Scheduling Policy into consideration. Which three options are available for the Dispatcher? (Select all that apply)",
-      options:[
-        {k:"A", t:"Select a Service Appointment from the list, use the \"Candidates\" action, and select the best Time Slot."},
-        {k:"B", t:"Select a Service Appointment from the list, use the \"Change Status\" action and \"Dispatch\"."},
-        {k:"C", t:"Select multiple Service Appointments from the list and bulk schedule them."},
-        {k:"D", t:"Select a Service Appointment from the list and use the \"Schedule\" action."}
-      ],
-      correct:["A", "C", "D"],
-      explanation:
-`**Why A and D are right.** Both the Schedule action and the Candidates action run the appointment through the active Scheduling Policy's work rules and service objectives — Salesforce's own guidance draws the line precisely here: "If you schedule an appointment using the Schedule or Candidates actions, you won't see any rule violations." Schedule automatically books the single best-ranked slot the policy finds; Candidates instead shows the dispatcher a ranked list of qualified resources/time slots (filtered by things like required skills) so they can pick among policy-compliant options themselves. Either way, the Scheduling Policy is what's doing the matching.
-
-**Why C is right.** The Appointment List supports the same automatic scheduling on a multi-selection: a dispatcher can "select the desired appointments," open the Actions menu, and choose Schedule to "execute an automatic scheduling process for the selected appointments." It's the same policy-driven Schedule logic as option D, just applied to a batch of appointments at once instead of one at a time.
-
-**Why B is wrong.** Change Status → Dispatched is a manual workflow transition, not a scheduling action — it only checks that the target status is "permitted in your service appointment workflow settings." It doesn't run the appointment against any Scheduling Policy at all; it simply flips the status field on an appointment that (presumably) has already been assigned some other way, which is the opposite of what "taking the Scheduling Policy into consideration" requires.`,
-      sources:[
-        {l:"Manage Service Appointments — Trailhead", u:"https://trailhead.salesforce.com/content/learn/modules/field-service-dispatcher-console-for-dispatchers/manage-service-appointments"},
-        {l:"Working in the Field Service Classic Dispatch Console Appointment List — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=service.pfs_appointments_list.htm&language=en_US&type=5"}
       ]
     },
     {
@@ -3832,54 +3694,6 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       ]
     },
     {
-      topic:"Managing Work Orders",
-      select:3,
-      prompt:"A Company wants to implement Service Level Agreement (SLA) for Work Orders. Which three considerations should the Consultant take into account? (Select all that apply)",
-      options:[
-        {k:"A", t:"A new Entitlement Process requires selecting a single Entitlement Process Type."},
-        {k:"B", t:"Milestones for Work Orders can be configured in Setup."},
-        {k:"C", t:"An Entitlements Process must be applied to both Cases and Work Orders."},
-        {k:"D", t:"Milestones for Work Orders can be set up from Metadata API."}
-      ],
-      correct:["A", "B", "D"],
-      explanation:
-`**Why A is right.** An Entitlement Process is scoped to exactly one object type at creation — Salesforce's own guidance is direct: "Entitlement processes only run on records that match their type—so you can't use the same entitlement process for cases and work orders." A Consultant implementing Work Order SLAs has to build (or clone) a dedicated Work Order-type process; the org's existing Case entitlement process can't simply be reused.
-
-**Why B is right.** Milestones are created declaratively from Setup — enter "Milestones" in Quick Find under Entitlement Management, click New Milestone, name it, and choose a recurrence type. That master milestone record is then attached to whichever Entitlement Process (Case or Work Order) needs it, so a Consultant can absolutely configure Work Order milestones point-and-click in Setup.
-
-**Why D is right.** Both EntitlementProcess and MilestoneType are real, documented Metadata API types, meaning the same Work Order SLA configuration — the process, its milestones, and their settings — can be defined and deployed as metadata (via Metadata API, Change Sets built on it, or DX) rather than clicked together by hand in every org. That's a real, standard alternative path a Consultant should keep in mind for repeatable, deployable configuration across sandboxes and production.
-
-**Why C is wrong.** This is the direct opposite of how entitlement processes work. Since "you can't use the same entitlement process for cases and work orders," a single process is never applied to *both* — a Consultant sets up one process for Cases and a separate one for Work Orders when both objects need SLA tracking.`,
-      sources:[
-        {l:"Use Entitlements with Work Orders — Trailhead", u:"https://trailhead.salesforce.com/content/learn/modules/entitlement-management-for-lightning-experience/use-entitlements-with-work-orders"},
-        {l:"Set Up Support Milestones — Trailhead", u:"https://trailhead.salesforce.com/content/learn/modules/entitlement-management-for-lightning-experience/set-up-milestones"}
-      ]
-    },
-    {
-      topic:"Managing Resources",
-      select:1,
-      prompt:"An employee at A Company performs the role of a Dispatcher and a Technician. How should a Consultant configure Salesforce Field Service to support this behavior?",
-      options:[
-        {k:"A", t:"Create one Service Resource and assign the relevant Permission Set Licenses."},
-        {k:"B", t:"Create two Skills records and assign them to the Service Resource record."},
-        {k:"C", t:"Create one Service Resource and assign the Technician and Dispatcher role."},
-        {k:"D", t:"Create two Service Resources and assign them to the employee."}
-      ],
-      correct:["A"],
-      explanation:
-`**Why A is right.** A Service Resource represents one person and links back to exactly one underlying User record, but that User is free to hold multiple Field Service permission set licenses at once — nothing prevents assigning both the Field Service Dispatcher license (access to the Dispatch Console) and the Field Service Scheduling/Mobile license (so the same person can be scheduled and use the mobile app as a technician) to a single user. Layering both licenses — and their matching permission sets — onto the one Service Resource is exactly how Salesforce models a person who wears both hats, without fragmenting their identity into separate records.
-
-**Why B is wrong.** Skills represent job competencies used for scheduling/qualification matching (electrical, plumbing, welding) — they're unrelated to system access or the Dispatcher-vs-Technician distinction, which is governed by licenses and permission sets, not Skill records.
-
-**Why C is wrong.** There's no "Role" field on Service Resource that you assign values like "Technician" and "Dispatcher" to. Access to the Dispatcher Console versus the mobile app is controlled at the User level through Permission Set Licenses and Permission Sets, not a role picklist on the Service Resource record.
-
-**Why D is wrong.** Service Resource is meant to be a single representation of one person tied to one User. Creating two Service Resources for the same employee would duplicate that person on the Gantt, fragment their skills/absences/scheduling history across two records, and create confusion about which resource actually represents them — the correct approach is one Service Resource carrying both sets of access.`,
-      sources:[
-        {l:"Field Service Permission Set Licenses — Salesforce Help", u:"https://help.salesforce.com/s/articleView?language=en_US&id=sf.fs_perm_set_licenses.htm&type=5"},
-        {l:"Create Service Resources for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=service.fs_create_resources.htm&language=en_US&type=5"}
-      ]
-    },
-    {
       topic:"Managing Scheduling and Optimization",
       select:1,
       prompt:"A Company provides prompt service and has multiple service levels for different customers. Over 50% of Service Appointments created on the same day that they need to completed. As a result, a Technician's daily schedule can change multiple times throughout the day. Which method of dispatching should a Consultant recommend implementing?",
@@ -3984,6 +3798,33 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       sources:[
         {l:"Guidelines for Generating Work Orders from a Maintenance Plan — Salesforce Help", u:"https://help.salesforce.com/s/articleView?language=en_US&id=service.fs_generate_work_orders_plan.htm&type=5"},
         {l:"Maintenance Plan Fields — Salesforce Help", u:"https://help.salesforce.com/s/articleView?id=sf.fs_maintenance_fields.htm&language=en_US&type=5"}
+      ]
+    },
+    {
+      topic:"Managing Work Orders",
+      select:3,
+      prompt:"Which three objects are associate to the Work Type? (Select all that apply)",
+      options:[
+        {k:"A", t:"Resources"},
+        {k:"B", t:"Skill Requirements"},
+        {k:"C", t:"Service Appointments"},
+        {k:"D", t:"Work Orders"}
+      ],
+      correct:["B","C","D"],
+      explanation:
+`**Why B is right.** The Field Service Developer Guide describes Skill Requirement's parent-linking field, RelatedRecordId, as polymorphic: "can be a work order, work order line item, work type, or pending service routing record." Work Type is one of the documented valid parents for a Skill Requirement — which is exactly the mechanism that lets a Work Type template carry its own set of required skills and levels.
+
+**Why C is right.** Salesforce's own Service Appointment field reference confirms this directly: Service Appointment has a "Work Type" field, described as "the work type associated with the service appointment" (read-only, inherited from parent). So a Service Appointment carries a real, documented link back to the Work Type of the job it belongs to.
+
+**Why D is right.** Work Order has a Work Type lookup field, and Salesforce's own documentation describes the relationship from the other direction too: "Adding a work type to a work order... causes the record to inherit the work type's duration values and required skills and products." That inheritance mechanism only works because Work Order is directly associated with Work Type via that lookup.
+
+**Why A is wrong.** There's no field or relationship connecting Service Resource to Work Type in the Field Service data model — Service Resource's fields (Location, Resource Type, Service Crew, and so on) contain nothing that references Work Type. Matching a resource to a job happens indirectly, through Skill Requirements and the Match Skills work rule comparing the resource's own assigned Skills against what the Work Type/Work Order requires — not through any direct Work Type–to–Resource link.
+
+*Note: this question's answer choices are framed differently from the one below (no "Product Required"/"Articles" options here, but "Service Appointments" and "Work Orders" are) — kept separate since the two option sets aren't the same.*`,
+      sources:[
+        {l:"SkillRequirement — Field Service Developer Guide", u:"https://developer.salesforce.com/docs/atlas.en-us.field_service_dev.meta/field_service_dev/sforce_api_objects_skillrequirement.htm"},
+        {l:"Service Appointment Fields for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?language=en_US&id=service.fs_appointment_fields.htm&type=5"},
+        {l:"Create Work Types for Field Service — Salesforce Help", u:"https://help.salesforce.com/s/articleView?language=en_US&id=service.fs_create_work_types.htm&type=5"}
       ]
     },
     {
