@@ -4064,15 +4064,23 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
         return { index:0, finished:false, order: buildOrder(), answers };
       }
 
+      // A saved order can be the full deck OR a shorter "review mode" queue
+      // (just the previously-wrong tickets) — accept any length from 1 up to
+      // DATA.length, as long as every entry is a distinct valid index, so a
+      // reload during a review round resumes that same reduced queue instead
+      // of discarding it back to the full shuffled deck.
       const validOrder = Array.isArray(saved.order)
-        && saved.order.length === DATA.length
-        && new Set(saved.order).size === DATA.length
+        && saved.order.length >= 1
+        && saved.order.length <= DATA.length
+        && new Set(saved.order).size === saved.order.length
         && saved.order.every((v) => Number.isInteger(v) && v >= 0 && v < DATA.length);
 
+      const order = validOrder ? saved.order : buildOrder();
+
       return {
-        index: Math.max(0, Math.min(DATA.length - 1, Number(saved.index) || 0)),
+        index: Math.max(0, Math.min(order.length - 1, Number(saved.index) || 0)),
         finished: !!saved.finished,
-        order: validOrder ? saved.order : buildOrder(),
+        order,
         answers
       };
     } catch (e) {
