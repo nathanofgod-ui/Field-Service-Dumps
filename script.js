@@ -1269,7 +1269,7 @@ This is effectively the mirror image of Ticket #13 in this deck ("three containe
     {
       topic:"Configuring Mobility",
       select:2,
-      prompt:"A Company needs to verify that a repair job has been completed to the customer satisfaction before an invoice can bee generated. Which two items should the consultant consider? Choose 2 answers.",
+      prompt:"A Company needs to verify that a repair job has been completed to the customer satisfaction before an invoice can be generated. Which two items should the consultant consider? Choose 2 answers.",
       options:[
         {k:"A", t:"Generate service in the organization's default language"},
         {k:"B", t:"Add service reports templates to the appropriate repair work type"},
@@ -1388,7 +1388,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
     {
       topic:"Managing Scheduling and Optimization",
       select:1,
-      prompt:"A Company wants to ensure that Service Appointments are only assigned to Active Resources. Which configuration should a Consultant for the Scheduling Policy?",
+      prompt:"A Company wants to ensure that Service Appointments are only assigned to Active Resources. Which configuration should a Consultant recommend for the Scheduling Policy?",
       options:[
         {k:"A", t:"Match Fields"},
         {k:"B", t:"Preferred Resources"},
@@ -3442,7 +3442,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
         {k:"A", t:"Define a Quick Action that creates a new Work Order record."},
         {k:"B", t:"Define a Quick Action that creates a new Service Appointment record."},
         {k:"C", t:"Define a Visualforce Page that creates a new Work Order record."},
-        {k:"D", t:"Define a Visual force Page that creates a new Service Appointment record."}
+        {k:"D", t:"Define a Visualforce Page that creates a new Service Appointment record."}
       ],
       correct:["B"],
       explanation:
@@ -4208,10 +4208,17 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
     // deck, a single section, or a review-errors round.
     const total = state.order.length;
     const resolved = state.order.filter((qi) => state.answers[qi].checked).length;
-    if (resolved < total) { els.shift.innerHTML = ""; return; }
+    // Show the summary once every ticket has been individually checked, OR
+    // once the user has explicitly hit Finish — which can happen with some
+    // tickets still skipped/unanswered. Either way, any ticket that was
+    // never checked counts as incorrect below rather than blocking the
+    // summary from appearing at all.
+    if (resolved < total && !state.finished) { els.shift.innerHTML = ""; return; }
 
-    const correct = state.order.filter((qi) => state.answers[qi].correct).length;
-    const wrongOriginalIdx = state.order.filter((qi) => !state.answers[qi].correct);
+    const isCorrect = (qi) => state.answers[qi].checked && state.answers[qi].correct;
+    const correct = state.order.filter(isCorrect).length;
+    const wrongOriginalIdx = state.order.filter((qi) => !isCorrect(qi));
+    const skippedCount = total - resolved;
     const pct = Math.round((correct / total) * 100);
     const scopeLabel = state.section ? esc(state.section) : "all sections";
 
@@ -4225,7 +4232,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
       const topic = DATA[qi].topic;
       const bucket = byCategory[topic] || (byCategory[topic] = { correct: 0, total: 0 });
       bucket.total++;
-      if (state.answers[qi].correct) bucket.correct++;
+      if (isCorrect(qi)) bucket.correct++;
     });
     const categoryNames = Object.keys(byCategory);
     const orderedCategoryNames = SECTION_ORDER.filter((name) => byCategory[name])
@@ -4249,7 +4256,8 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
     const reviewHtml = wrongOriginalIdx.length
       ? `<div class="review-chips">${wrongOriginalIdx.map((qi) => {
           const pos = state.order.indexOf(qi);
-          return `<button class="chip mono" data-i="${pos}" style="width:auto;padding:0 10px;">Ticket ${pos + 1}</button>`;
+          const skipped = !state.answers[qi].checked;
+          return `<button class="chip mono" data-i="${pos}" style="width:auto;padding:0 10px;">Ticket ${pos + 1}${skipped ? " (skipped)" : ""}</button>`;
         }).join("")}</div>`
       : `<p style="margin:0;">Every ticket resolved correctly.</p>`;
 
@@ -4260,7 +4268,7 @@ This is confirmed directly by the WorkOrderLineItem object's own field descripti
     els.shift.innerHTML = `
       <div class="shift">
         <h2>End of shift</h2>
-        <p>All ${total} tickets resolved — ${scopeLabel}.</p>
+        <p>${resolved === total ? `All ${total} tickets resolved` : `${resolved} of ${total} tickets answered — ${skippedCount} skipped ticket${skippedCount === 1 ? "" : "s"} counted as incorrect`} — ${scopeLabel}.</p>
         <div class="score-line">Score: ${correct}/${total} - ${pct}%</div>
         <div class="row">
           <div><div class="num">${correct} / ${total}</div><div class="lbl">Correct</div></div>
